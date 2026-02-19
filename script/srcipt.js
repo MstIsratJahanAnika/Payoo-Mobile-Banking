@@ -24,5 +24,11 @@ document.getElementById('login-btn').addEventListener('click', function(){
     // step-3
     if(contactNumber === '01234567' && pin === '1234'){ //2.1
         alert('Successfully Logged-in');
+
+        window.location.assign("homepage.html");
+    }
+    else{
+        alert('Login Failed');
+        return;
     }
 });
