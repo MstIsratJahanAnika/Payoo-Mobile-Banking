@@ -36,7 +36,7 @@
 
 </body>
 
-<header class="border-b-1 border-gray-300">
+<header class="border-b-1 border-gray-300 sticky top-0 bg-base-200 z-10"> <!--sticky position-->
     <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <!-- left side -->
         <div class="left flex gap-2">
@@ -45,21 +45,23 @@
             </div>
             <!-- text part beside image -->
             <div>
-                <h2 class="text-2xl font-bold"> $ <span id="balance">45000</span></h2> <!--span tag a balance, changeable tai-->
+                <h2 class="text-2xl font-bold"> $ <span id="balance">45000</span></h2>
+                <!--span tag a balance, changeable tai-->
                 <p class="text-neutral/50">Available Balance</p> <!--opacity 50%-->
             </div>
         </div>
 
         <!-- right side -->
         <div class="right">
-            <a href="index.html" class="btn btn-soft"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a> <!--daisy class - btn -->
+            <a href="index.html" class="btn btn-soft"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
+            <!--daisy class - btn -->
             <!-- button na hoye anchor hobe ja logout a login page a niye jabe -->
         </div>
     </section>
 </header>
 
 <!-- welcome to payoo -->
- <section class="w-11/12 mx-auto py-8 space-y-5">
+<section class="w-11/12 mx-auto py-8 space-y-5">
     <h2 class="text-2xl font-bold">Welcome to Pay<span class="text-primary">oo</span></h2>
     <p class="text-[#080808]/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
@@ -95,6 +97,33 @@
             <p>Transactions</p>
         </button>
     </div>
- </section>
+</section>
+
+<!-- form -->
+<section id="Cashout" class="w-11/12 mx-auto py-5">
+
+    <h2 class="text-xl font-bold">Cashout</h2>
+    <div class="card bg-base-100 w-full max-w-full shadow mt-8">
+        <div class="card-body">
+            <fieldset class="fieldset">
+                <label class="label text-neutral font-bold">Agent Number</label>
+                <input id="agent-number" type="text" maxlength="11" minlength="11"
+                    class="input rounded-full bg-base-200 w-full" placeholder="Enter 11 digit number" />
+
+                <br>
+                <label class="label text-neutral font-bold">Amount</label>
+                <input type="text" id="amount"
+                    class="input rounded-full bg-base-200 w-full" placeholder="Enter amount to withdraw" />
+
+                <br>
+                <label class="label text-neutral font-bold">Pin Number</label>
+                <input type="text" id="pin-number" maxlength="4" minlength="4"
+                    class="input rounded-full bg-base-200 w-full" placeholder="Enter 4 digit pin number" />
+                <button id="withdraw-btn" class="btn btn-primary mt-4 rounded-full">Withdraw Money</button>
+            </fieldset>
+        </div>
+    </div>
+</section>
+<script src="script/cashout.js"></script>
 
 </html>
